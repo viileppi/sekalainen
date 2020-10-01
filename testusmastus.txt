@@ -1,0 +1,9 @@
+
+define :stab do
+  use_synth :beep
+  play (chord :a, :minor)
+  sleep 0.5
+end
+3.times do
+  2.times do stab end
+end

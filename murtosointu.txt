@@ -1,0 +1,17 @@
+
+define :stab do | i, j |
+  use_synth :chiplead
+  loop do
+    play (chord j, :minor, num_octaves: 1).tick, release: 0.1
+    sleep 0.5
+    i = dec i
+    if i <= 1 then
+      break
+    end
+  end
+end
+4.times do
+  stab 8, :e2
+  stab 4, :a2
+  stab 4, :b2
+end
